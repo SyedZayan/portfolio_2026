@@ -9,7 +9,7 @@ import ExperienceProcess from "@/components/sections/ExperienceProcess";
 import TrustLogos from "@/components/sections/TrustLogos";
 import FAQ from "@/components/sections/FAQ";
 import CallToAction from "@/components/sections/CallToAction";
-import TrustAndMetrics from "@/components/sections/TrustAndMetrics";
+
 
 export default function Home() {
   return (
