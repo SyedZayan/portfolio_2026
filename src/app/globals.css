@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
+@theme {
+  /* High-End Modern Tech Palette — Inspired by Premium Production Kits */
+  --color-dark-bg: #050507;          /* Sleek Obsidian slate background */
+  --color-dark-card: #0C0C0E;        /* Crisp, clear surface for sections & cards */
+  --color-dark-border: #17181C;      /* Subtle, high-end container borders */
+  
+  /* Authoritative Execution Accents (Swapping yellow for calibrated Mint/Teal) */
+  --color-accent: #02B984;           /* High-ticket enterprise emerald green */
+  --color-accent-hover: #00966B;     /* Rich hover state for interactive controls */
+  --color-accent-muted: #ECFDF5;     /* Ultra-clean crisp off-white tint */
+
+  /* Bind Next.js dynamic fonts directly into Tailwind v4 tokens */
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-sans-mono), monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050507;
+  --foreground: #F4F4F5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Enforcing absolute typographical consistency across all modern browsers */
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enforce crisp structural headings formatting */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.03em; /* Clean compressed layout look for technical copy */
+  font-weight: 800;
+}
+
+/* Enforce analytical technical mono blocks layout styling */
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+/* --- Premium Tech Design Utilities --- */
+
+/* Subtle grid overlay to give an engineering/AI infrastructure feel */
+.saas-grid {
+  background-size: 44px 44px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+}
+
+/* Sleek glow effect for high-end project cards */
+.premium-glow {
+  position: relative;
+}
+.premium-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to bottom, rgba(2, 185, 132, 0.12), rgba(255, 255, 255, 0.01));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Minimalist, high-end scrollbar design */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C1D24;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A2B35;
 }

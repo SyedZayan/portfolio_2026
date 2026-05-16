@@ -1,0 +1,93 @@
+import { Code, Cpu, LayoutDashboard, Database, ShieldCheck, Zap } from "lucide-react";
+
+export const SERVICES = [
+  {
+    title: "Investment Platforms & FinTech",
+    description: "Architecting multi-tenant investment applications featuring live marketplace data integration, investor communication modules, and structured capital deployment pipelines.",
+    benefit: "Delivers production-ready portals optimized for investor trust and heavy transactional flows.",
+    icon: ShieldCheck,
+    tech: ["Next.js", "Supabase", "Live Price APIs", "TailwindCSS"],
+  },
+  {
+    title: "Automated KYC & Verification Systems",
+    description: "Engineering secure biometric onboarding sequences. Integrating computer vision components for face matching and machine-learning document processing for automated ID parsing.",
+    benefit: "Protects applications from fraud while cutting down user onboarding friction from minutes to seconds.",
+    icon: Cpu,
+    tech: ["AWS Rekognition", "OCR Webhooks", "Supabase Auth"],
+  },
+  {
+    title: "Full-Stack Web Architectures",
+    description: "Building resilient web applications with server-side generation, highly clean layout component design, dynamic content modules, and structured backend systems.",
+    benefit: "Guarantees exceptional performance benchmarks along with scalable, SEO-optimized business footprints.",
+    icon: Code,
+    tech: ["Next.js", "TypeScript", "React 19", "Vercel"],
+  },
+  {
+    title: "Large-Scale Web Scraping & Data Pipelines",
+    description: "Developing robust script clusters designed to parse, wash, clean, and organize massive raw records tables securely into transactional operational databases.",
+    benefit: "Gathers critical commercial intelligence at scale with absolute bypass handling.",
+    icon: Database,
+    tech: ["Python", "SQL Server", "Data Extraction Engine"],
+  },
+  {
+    title: "Corporate Workflow Automation",
+    description: "Automating internal communications loops by wiring transaction email grids, dynamic business lead funnel routing, and unified interactive support components.",
+    benefit: "Removes routine operational friction, routing incoming leads directly to closing staff.",
+    icon: Zap,
+    tech: ["Resend API", "Tawk.to Engine", "Custom Webhooks"],
+  },
+  {
+    title: "Business Intelligence Dashboards",
+    description: "Designing low-latency administrator management boards and operational portals that track client accounts, manage CMS items, and expose backend variables.",
+    benefit: "Gives executive teams complete glass-pane control over multi-site operational instances.",
+    icon: LayoutDashboard,
+    tech: ["Admin Panels", "Relational Databases", "Role Management"],
+  },
+];
+
+export const PROJECTS = [
+  {
+    id: "bricketx-global",
+    name: "BricketX Global Investment Platform",
+    category: "FinTech & Automated KYC",
+    problem: "An international investment platform required a secure system to manage investor onboarding, match real-time financial tracking variables, and perform automated identity verification securely.",
+    solution: "Engineered full architecture syncing Next.js and Supabase. Deployed AWS Rekognition biometric loops for face comparison alongside OCR tools for parsing document identification files, and unified transactional notifications via Resend.",
+    techStack: ["Next.js", "Supabase", "AWS Rekognition", "OCR APIs", "Resend", "Tawk.to"],
+    result: "Deployed a production-grade investor ecosystem with entirely automated user-verification flows and real-time gold market pricing synchronization.",
+    image: "/projects/project.jpg",
+    link: "https://www.bricketx.com/",
+  },
+  {
+    id: "bricketx-uae",
+    name: "BricketX UAE Deployment Grid",
+    category: "Regional Product Scaling",
+    problem: "Scaling the existing investment network infrastructure to match strict regional requirements, content configurations, and unique regional opportunity schemas for UAE markets.",
+    solution: "Optimized a localized front-end content matrix, created dynamic investor pipeline communication nodes, automated lead capture forms, and configured structural edge deployment.",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "SEO Architecture"],
+    result: "Delivered an operational, high-performance web asset completely ready for UAE marketing acquisition.",
+    image: "/projects/project.jpg",
+    link: "https://www.bricketx.ae/",
+  },
+  {
+    id: "maq-investments",
+    name: "MAQ Investments Digital Portal",
+    category: "Corporate Investment Architecture",
+    problem: "An asset firm required an elite digital presence capable of showcasing structured plans while tracking incoming high-ticket client inquiries cleanly.",
+    solution: "Built a sleek, responsive portfolio setup containing dynamic pages for investment opportunities, integrated client workflows, and custom inquiry routers.",
+    techStack: ["Next.js", "TypeScript", "Dynamic Routing", "Form Processing"],
+    result: "Provides an authoritative client portal that transforms cold inbound leads into tracked database opportunities.",
+    image: "/projects/project.jpg",
+    link: "https://maqinvestments.ae/",
+  },
+  {
+    id: "mintrix-contracting",
+    name: "Mintrix Contracting Ecosystem",
+    category: "Corporate Operations Platform",
+    problem: "An industrial contractor needed to scale their digital footprint to showcase enterprise project histories and funnel custom B2B structural bids.",
+    solution: "Developed a clean frontend layout highlighting structured services, dynamic project galleries, and automated business inquiry routing modules.",
+    techStack: ["React", "Next.js", "TailwindCSS", "Hosting Deployment"],
+    result: "Unified multi-tiered business units into a scannable, mobile-responsive web platform that accelerates corporate bidding requests.",
+    image: "/projects/project.jpg",
+    link: "https://www.mintrixcontracting.com/",
+  },
+];
