@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Code2, ShieldAlert } from "lucide-react";
+import { ArrowUpRight, Code2, Download, Briefcase } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
 const containerVariants: Variants = {
@@ -43,7 +43,7 @@ export default function Hero() {
         animate="visible"
       >
         
-        {/* Left Column: Authoritative Value Copy */}
+        {/* Left Column: Headline copy and action triggers */}
         <div className="lg:col-span-7 text-left">
           <div className="mb-8">
             <div className="overflow-hidden py-1">
@@ -84,21 +84,25 @@ export default function Hero() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
             </motion.div>
-            <Link
-              href="/projects"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-dark-card/40 border border-dark-border text-zinc-300 font-semibold text-sm hover:bg-dark-border transition-colors w-full sm:w-auto"
+
+          <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
+            <a
+              href="/doc/Syed-Zayan-Ali.pdf" // Updated absolute web path
+              download="Syed_Zayan_Ali_Resume.pdf"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-dark-card border border-dark-border text-zinc-300 font-bold text-sm uppercase tracking-wider hover:border-accent/30 hover:text-white transition-all w-full sm:w-auto font-mono"
             >
-              Examine Deployments
-            </Link>
+              Download Resume
+              <Download className="w-3.5 h-3.5 text-accent" />
+            </a>
+          </motion.div>
           </motion.div>
         </div>
 
-        {/* Right Column: Premium Personal / Abstract Technical Display Grid */}
+        {/* Right Column: Premium Personal Identity Display Card */}
         <motion.div 
           variants={fadeUpVariants}
           className="lg:col-span-5 flex justify-center lg:justify-end w-full relative h-[450px]"
         >
-          {/* Subtle background tech matrix overlay */}
           <div className="absolute inset-0 bg-radial-[rgba(2,185,132,0.04)_1px,transparent_1px] [background-size:20px_20px] pointer-events-none rounded-3xl" />
           
           <motion.div 
@@ -115,23 +119,27 @@ export default function Hero() {
               <span className="text-accent/60">● CORE_ONLINE</span>
             </div>
 
-            {/* Image Frame Content Area */}
+            {/* Compact ID Content Area */}
             <div className="relative w-full h-[320px] bg-gradient-to-b from-zinc-950 to-dark-bg border border-dark-border/50 rounded-2xl overflow-hidden flex items-center justify-center group">
-              {/* NOTE: Drop your clean professional profile picture or mockup asset inside this tag */}
+              {/* Note: Un-comment the line below to drop your real profile image inside later */}
               {/* <Image src="/your-profile.jpg" alt="Syed Zayan Ali" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500" /> */}
               
-              {/* Modern placeholders while asset loads */}
-              <div className="text-center p-6 space-y-3 z-10">
-                <div className="w-16 h-16 rounded-full bg-accent/5 border border-accent/20 flex items-center justify-center mx-auto shadow-inner">
-                  <ShieldAlert className="w-6 h-6 text-accent" />
+              <div className="text-center p-6 space-y-4 z-10">
+                <div className="w-16 h-16 rounded-full bg-accent/5 border border-accent/20 flex items-center justify-center mx-auto shadow-inner relative">
+                  <Briefcase className="w-5 h-5 text-accent" />
+                  <span className="absolute bottom-0 right-0 flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                  </span>
                 </div>
-                <div>
-                  <h3 className="text-sm font-bold text-white font-mono tracking-tight">SYED ZAYAN ALI</h3>
-                  <p className="text-[10px] font-mono text-zinc-500 mt-1 uppercase tracking-widest">Full-Stack Systems Engineer</p>
+                
+                <div className="space-y-1">
+                  <h3 className="text-base font-black text-white font-sans tracking-tight uppercase">SYED ZAYAN ALI</h3>
+                  <p className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest font-semibold">Web Developer @ BricketX PK</p>
+                  <p className="text-[9px] font-mono text-zinc-600 uppercase tracking-wider block pt-0.5">Jan 2026 - Present</p>
                 </div>
               </div>
               
-              {/* Bottom glass reflection gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent pointer-events-none" />
             </div>
 
